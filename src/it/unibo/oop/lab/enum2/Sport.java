@@ -42,12 +42,12 @@ public enum Sport {
      */
 	
 	BASKET(Place.INDOOR, 20, "Basket"),
-	VOLLEY(Place.INDOOR, 20, "Basket"),
-	TENNIS(Place.OUTDOOR, 20, "Basket"),
-	BIKE(Place.OUTDOOR, 1, "Basket"),
-	F1(Place.OUTDOOR, 1, "Basket"),
-	MOTOGP(Place.OUTDOOR, 1, "Basket"), 
-	SOCCER(Place.OUTDOOR, 20, "Basket");
+	VOLLEY(Place.INDOOR, 20, "Volley"),
+	TENNIS(Place.OUTDOOR, 20, "Tennis"),
+	BIKE(Place.OUTDOOR, 1, "Bike"),
+	F1(Place.OUTDOOR, 1, "F1"),
+	MOTOGP(Place.OUTDOOR, 1, "MotoGP"), 
+	SOCCER(Place.OUTDOOR, 20, "Soccer");
 	
 
 
