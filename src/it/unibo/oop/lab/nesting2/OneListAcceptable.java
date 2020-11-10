@@ -1,6 +1,7 @@
 package it.unibo.oop.lab.nesting2;
 
 
+import java.util.Iterator;
 import java.util.List;
 
 public class OneListAcceptable <T> implements Acceptable<T>{
@@ -19,21 +20,18 @@ public class OneListAcceptable <T> implements Acceptable<T>{
 		// TODO Auto-generated method stub
 		return new Acceptor<T>() {
 			
-			private int index = 0;
+			private Iterator<T> iterator = OneListAcceptable.this.elements.iterator();
 			
 			@Override
 			public void accept(T newElement) throws ElementNotAcceptedException {
-				if (index >= elements.size() || elements.get(index) != newElement) {
+				if (!this.iterator.hasNext() || !this.iterator.next().equals(newElement)) {
 					throw new ElementNotAcceptedException(newElement);
-				}else {
-					index += 1;
-				}
-				
+				}				
 			}
 
 			@Override
 			public void end() throws EndNotAcceptedException {
-				if (index < elements.size()) {
+				if (!this.iterator.hasNext()) {
 					throw new EndNotAcceptedException();
 				}
 				
