@@ -31,7 +31,7 @@ public class OneListAcceptable <T> implements Acceptable<T>{
 
 			@Override
 			public void end() throws EndNotAcceptedException {
-				if (!this.iterator.hasNext()) {
+				if (this.iterator.hasNext()) {
 					throw new EndNotAcceptedException();
 				}
 				
